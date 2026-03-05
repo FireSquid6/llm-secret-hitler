@@ -1,5 +1,5 @@
-import { generateText, tool, stepCountIs } from "ai";
-import type { ToolSet } from "ai";
+import { generateText, tool, stepCountIs, streamText } from "ai";
+import type { CoreMessage, ToolSet } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 import type { GameState, Knowledge } from "./engine";
@@ -31,6 +31,7 @@ class AvalonAgent {
   private stateQueue: StateUpdate[] = [];
   private isProcessing = false;
   private systemPrompt = "";
+  private conversationHistory: CoreMessage[] = [];
 
   constructor(
     private playerName: string,
@@ -86,9 +87,9 @@ class AvalonAgent {
         inputSchema: z.object({
           message: z.string().describe("The message to send"),
         }),
-        execute: async ({ message }) => {
+        execute: ({ message }) => {
           console.log(`[${this.playerName}] chat: ${message}`);
-          await this.game.sendChatMessage(this.playerName, message);
+          this.game.sendChatMessage(this.playerName, message);
           return "Message sent";
         },
       }),
@@ -109,12 +110,12 @@ class AvalonAgent {
               `Exactly ${needed} player IDs to send on the quest. Players: ${playerList.join(", ")}`,
             ),
         }),
-        execute: async ({ playerIds }) => {
+        execute: ({ playerIds }) => {
           console.log(
             `[${this.playerName}] nominates: ${playerIds.join(", ")}`,
           );
           try {
-            await this.game.performAction(this.playerName, {
+            this.game.performAction(this.playerName, {
               kind: "nominate",
               playerIds,
             });
@@ -133,10 +134,10 @@ class AvalonAgent {
         inputSchema: z.object({
           vote: z.enum(["Approve", "Reject"]).describe("Your vote"),
         }),
-        execute: async ({ vote }) => {
+        execute: ({ vote }) => {
           console.log(`[${this.playerName}] votes: ${vote}`);
           try {
-            await this.game.performAction(this.playerName, {
+            this.game.performAction(this.playerName, {
               kind: "vote",
               vote,
             });
@@ -155,10 +156,10 @@ class AvalonAgent {
         inputSchema: z.object({
           action: z.enum(["Succeed", "Fail"]).describe("Your quest card"),
         }),
-        execute: async ({ action }) => {
+        execute: ({ action }) => {
           console.log(`[${this.playerName}] quest card: ${action}`);
           try {
-            await this.game.performAction(this.playerName, {
+            this.game.performAction(this.playerName, {
               kind: "quest",
               action,
             });
@@ -182,10 +183,10 @@ class AvalonAgent {
             .string()
             .describe(`Player to investigate: ${others}`),
         }),
-        execute: async ({ playerId }) => {
+        execute: ({ playerId }) => {
           console.log(`[${this.playerName}] lady of the lake: ${playerId}`);
           try {
-            await this.game.performAction(this.playerName, {
+            this.game.performAction(this.playerName, {
               kind: "lady",
               playerId,
             });
@@ -209,10 +210,10 @@ class AvalonAgent {
             .string()
             .describe(`Player to assassinate: ${others}`),
         }),
-        execute: async ({ playerId }) => {
+        execute: ({ playerId }) => {
           console.log(`[${this.playerName}] assassinates: ${playerId}`);
           try {
-            await this.game.performAction(this.playerName, {
+            this.game.performAction(this.playerName, {
               kind: "assassinate",
               playerId,
             });
@@ -278,5 +279,47 @@ export async function simulateAvalonGame() {
 
   console.log(`Starting Avalon simulation with ${playerNames.length} players`);
   await game.startGame();
+
+  game.onStateUpdate("admin", (state) => {
+    const currentRound = state.rounds[state.rounds.length - 1];
+    const questCounts = state.rounds.reduce(
+      (acc, r) => {
+        if (!r.quest?.completed) return acc;
+        const failsRequired = 1; // simplified; full check done in engine
+        if (r.quest.failCards >= failsRequired) acc.fails++;
+        else acc.passes++;
+        return acc;
+      },
+      { passes: 0, fails: 0 },
+    );
+
+    const parts: string[] = [
+      `[Game] status=${state.status}`,
+      `score=Arthurian:${questCounts.passes} Mordredic:${questCounts.fails}`,
+    ];
+
+    if (currentRound) {
+      parts.push(`quest=${currentRound.questNumber}`);
+      parts.push(`monarch=${currentRound.monarch}`);
+      if (currentRound.nominatedPlayers) {
+        parts.push(`nominated=[${currentRound.nominatedPlayers.join(",")}]`);
+      }
+      const voteCount = Object.keys(currentRound.votes).length;
+      if (voteCount > 0) {
+        parts.push(`votes=${voteCount}/${state.players.length}`);
+      }
+    }
+
+    if (state.result) {
+      parts.push(`result=${state.result}`);
+    }
+
+    console.log(parts.join(" "));
+  })
+  game.onChatMessage("admin", (msg) => {
+    console.log(`${msg.time.toString()} [${msg.playerName}]: ${msg.message}`);
+  })
+
+  await game.finished;
   console.log("Game simulation complete");
 }

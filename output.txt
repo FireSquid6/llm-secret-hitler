@@ -1,0 +1,318 @@
+❯ bun run src/index.ts simulate
+Starting Avalon simulation with 8 players
+[Phoebe] nominates: Phoebe, Peter, Eleanor
+[Phoebe] (thinking) I've nominated myself, Peter (my evil ally), and Eleanor for Quest 1. This gives us a good chance to sabotage the quest while appearing balanced - I'm including a good player to seem fair, and having myself as the monarch nominate myself and a good player looks relatively innocent. Now we wait for the vote.
+[Nolan] votes: Approve
+[Henry] votes: Approve
+[Lainey] votes: Approve
+[Eleanor] votes: Approve
+[Andrew] votes: Reject
+[Peter] votes: Approve
+[Alexandra] votes: Approve
+[Henry] (thinking) I've voted to Approve the team. Starting with an approval allows us to see how the quest plays out, which will give us valuable information about whether Phoebe, Peter, and Eleanor are trustworthy players.
+[Nolan] (thinking) I've voted to Approve the team. This is a reasonable first quest nomination - the team size is correct, and at this early stage, I don't have information suggesting all three are evil. Getting the first quest to resolve will give us valuable information through the quest results.
+[Phoebe] votes: Approve
+[Eleanor] (thinking) I've voted to approve the team. Now I'll be going on Quest 1 with Phoebe and Peter. I need to play a Success card when we vote on the quest itself, as I'm loyal to the Arthurian team.
+[Andrew] (thinking) I've voted to reject. Having an evil player (Phoebe) on a quest that fails with just one Fail card seems too risky on quest 1. Better to push for a different composition.
+[Alexandra] (thinking) I've voted to Approve. This first quest will give me valuable information about whether Phoebe/Merlin or Phoebe/Morgana acted, and help me narrow down the evil team composition.
+[Peter] (thinking) Good. I've voted to approve the team. With two evil players on a 3-person quest, we control whether this succeeds or fails. I'll be ready to play strategically during the quest phase.
+[Phoebe] (thinking) I've voted to Approve the team. This nomination is good for the Mordredic team since Peter and I can coordinate to play a Fail card and tank this first quest.
+[Eleanor] quest card: Succeed
+[Eleanor] (thinking) I've played my card. Now we wait to see what Phoebe and Peter play. With only needing 1 Fail card to sabotage this quest, I'll be watching carefully to see if either of them is working for Mordred.
+[Peter] quest card: Succeed
+[Peter] (thinking) I've played Succeed on this first quest. This is a strategic decision to build trust early - with only 3 players on this quest, playing Fail would be too obvious. The Mordredic team has plenty of opportunities to sabotage later when there are more players on quest teams and it will be harder to pinpoint who played the Fail cards.
+[Phoebe] quest card: Succeed
+[Phoebe] (thinking) I've played Succeed. Now the outcome depends on what Peter and Eleanor play. This should help establish me as a trustworthy player early on.
+Andrew: Merlin
+Lainey: Assassin
+Peter: Mordred
+Henry: Arthurian Servant
+Eleanor: Arthurian Servant
+Phoebe: Morgana
+Alexandra: Percival
+Nolan: Arthurian Servant
+[Andrew] nominates: Lainey, Peter, Henry, Eleanor
+[Game] status=in-progress score=Arthurian:1 Mordredic:0 quest=2 monarch=Andrew nominated=[Lainey,Peter,Henry,Eleanor]
+[Andrew] (thinking) I've nominated Lainey, Peter, Henry, and Eleanor for Quest 2. This team includes one of the evil players (Lainey) while keeping me protected off the quest. The nomination should seem reasonable to the table while strategically positioning myself safely as Merlin.
+[Lainey] votes: Approve
+[Peter] votes: Approve
+[Eleanor] votes: Approve
+[Nolan] votes: Approve
+[Henry] votes: Approve
+[Phoebe] votes: Approve
+[Peter] (thinking) I've voted to Approve. This nomination is good for us - Lainey is on the team and can play a Fail card to sabotage the quest. Approving also makes me look like a cooperative player, which helps maintain my cover as Mordred.
+[Eleanor] (thinking) I've approved the team. Now we'll see what happens on this quest - the results will give us valuable information about whether any evil players are among Lainey, Peter, or Henry.
+[Nolan] (thinking) I've voted to Approve. Without strong evidence of corruption in this team composition, approving seems like the right move to keep momentum and avoid stalling on nominations.
+[Alexandra] votes: Approve
+[Henry] (thinking) I voted to Approve the team. As a good player, I want to keep quests progressing, and this team composition seems balanced. On the quest, I'll play a Success card to help the Arthurian team.
+[Andrew] votes: Reject
+[Game] status=in-progress score=Arthurian:1 Mordredic:0 quest=2 monarch=Andrew nominated=[Lainey,Peter,Henry,Eleanor] votes=8/8
+[Alexandra] (thinking) I've approved the team. This nomination seems reasonable - keeping Andrew off the quest while sending four others could work either way, but without concrete evidence of who the evil players are among the remaining candidates, I'll trust this progression. We can learn more from how the quest resolves and adjust our strategy accordingly.
+[Henry] quest card: Succeed
+[Eleanor] quest card: Succeed
+[Henry] (thinking) I've played my Succeed card. Quest 2 is now in progress with Lainey, Peter, Eleanor, and myself on the team. We need all four of us to play Succeed for this quest to succeed, since it only takes 1 Fail card to sabotage it. I'm hoping the rest of the team are all loyal Arthurians.
+[Eleanor] (thinking) I've played my Success card. This quest needs all 4 team members to play Success to succeed (since it fails with 1+ Fail cards). I'm hoping Lainey, Peter, and Henry also play Success. The fact that Andrew rejected the team is interesting - that could be useful information for identifying potential evil players, though of course it could also just be a strategic vote.
+[Lainey] quest card: Fail
+[Peter] quest card: Fail
+[Game] status=in-progress score=Arthurian:1 Mordredic:1 quest=2 monarch=Andrew nominated=[Lainey,Peter,Henry,Eleanor] votes=8/8
+[Lainey] (thinking) I've cast my Fail card. Now it depends on what Peter and the good players do. If at least one of them plays Fail (or if Peter does), the quest fails and we even the score. If somehow all three others play Succeed, the quest succeeds - but that seems unlikely given Peter is there to sabotage.
+[Peter] (thinking) I've played my Fail card. This should sabotage the quest. My hope is that Lainey either also plays Fail (guaranteeing failure) or plays Succeed, either way the quest fails with my single Fail card. Let's see how the other team members played.
+[Lainey] lady of the lake: Nolan
+[Game] status=in-progress score=Arthurian:1 Mordredic:1 quest=3 monarch=Nolan
+[Lainey] (thinking) *Good - I've used my Lady of the Lake action to investigate Nolan. Now I need to see the result to know whether Nolan is Arthurian or Mordredic. This will help me understand the board better as we move forward into Quest 3.*
+[Nolan] nominates: Nolan, Andrew, Eleanor, Phoebe
+[Game] status=in-progress score=Arthurian:1 Mordredic:1 quest=3 monarch=Nolan nominated=[Nolan,Andrew,Eleanor,Phoebe]
+[Nolan] (thinking) I've nominated Andrew, Eleanor, Phoebe, and myself for Quest 3. This feels like a reasonable team composition - including myself ensures one guaranteed Success card, and I'm choosing players I haven't seen exhibit obviously suspicious behavior. Now it's time for the other players to vote on whether they approve this team.
+[Eleanor] votes: Approve
+[Peter] votes: Approve
+[Lainey] votes: Approve
+[Henry] votes: Approve
+[Peter] (thinking) I've voted to Approve. This is a strong team composition for our Mordredic goals since Phoebe is included, and with only 1 fail card needed to sabotage this quest, we're in a good position.
+[Andrew] votes: Reject
+[Lainey] (thinking) *Good. Getting Phoebe on this quest is exactly what we need. With Phoebe able to play a Fail card on a quest that only needs 1 Fail to go down, this should secure our next victory and tie the score at 2-2. I'll stay quiet and let this vote play out naturally.*
+[Nolan] votes: Approve
+[Alexandra] votes: Reject
+[Phoebe] votes: Approve
+[Game] status=in-progress score=Arthurian:1 Mordredic:1 quest=3 monarch=Nolan nominated=[Nolan,Andrew,Eleanor,Phoebe] votes=8/8
+[Henry] (thinking) I've voted to Approve. Now we'll see how the rest of the table votes and whether this quest succeeds or fails. The outcome will give us more information about who the evil players are.
+[Andrew] (thinking) I've voted to reject this nomination. The inclusion of Phoebe on a quest where just one fail card causes failure is too risky - we need better odds on this critical quest 3.
+[Nolan] (thinking) I've voted to approve the team I nominated. This is a straightforward Arthurian play - I believe this team has a reasonable chance of success given the information available to me.
+[Phoebe] (thinking) I've voted to Approve the team. I'm on the quest now, which gives me the opportunity to play my fail card and sabotage this quest from within while maintaining my cover as a trustworthy player.
+[Eleanor] quest card: Succeed
+[Nolan] quest card: Succeed
+[Andrew] quest card: Succeed
+[Eleanor] (thinking) I've played my Success card for this quest. Now we'll see what the other team members played - hopefully Nolan, Andrew, and Phoebe all played Succeed as well to keep us in this game.
+[Nolan] (thinking) I've played my Succeed card. This quest will now succeed only if the other three players (Andrew, Eleanor, and Phoebe) also play Succeed. Let's see how this plays out.
+[Andrew] (thinking) I've played my Succeed card. Now we'll see what happens - this quest's outcome depends on whether the other three players (Nolan, Eleanor, and Phoebe) play Succeed or Fail. Given that Phoebe is evil, I expect this quest to fail, which would tie the score at 2-1 for Mordredics. The game is getting tense.
+[Phoebe] quest card: Succeed
+[Game] status=in-progress score=Arthurian:2 Mordredic:1 quest=3 monarch=Nolan nominated=[Nolan,Andrew,Eleanor,Phoebe] votes=8/8
+[Phoebe] (thinking) I played Succeed on this quest. With no other Mordredic players on the team, playing Fail solo would have been too risky and exposed me immediately. By playing Succeed, I maintain my cover as a good player while keeping my identity hidden for future quests where I can be more effective at sabotage.
+[Nolan] lady of the lake: Andrew
+[Game] status=in-progress score=Arthurian:2 Mordredic:1 quest=4 monarch=Alexandra
+[Nolan] (thinking) I used the Lady of the Lake to investigate Andrew. His rejection of his own team nomination was suspicious enough to warrant investigation. Now I'll await the result to inform my future strategy.
+[Alexandra] nominates: Andrew, Phoebe, Eleanor, Henry, Lainey
+[Game] status=in-progress score=Arthurian:2 Mordredic:1 quest=4 monarch=Alexandra nominated=[Andrew,Phoebe,Eleanor,Henry,Lainey]
+[Alexandra] chat: I've nominated Andrew, Phoebe, Eleanor, Henry, and Lainey for Quest 4. This is our critical quest - if we succeed here, we win the game. I wanted to put together what I believe is our strongest possible team. Let's vote and see what happens!
+Thu Mar 05 2026 13:11:14 GMT-0600 (Central Standard Time) [Alexandra]: I've nominated Andrew, Phoebe, Eleanor, Henry, and Lainey for Quest 4. This is our critical quest - if we succeed here, we win the game. I wanted to put together what I believe is our strongest possible team. Let's vote and see what happens!
+[Peter] votes: Approve
+[Phoebe] votes: Approve
+[Andrew] votes: Reject
+[Nolan] votes: Approve
+[Henry] votes: Approve
+[Eleanor] votes: Approve
+[Phoebe] (thinking) I'm voting to Approve. This team composition works well for us - with both Lainey and myself on the quest, we can ensure it fails with our Fail cards.
+[Peter] (thinking) *Good - this team composition gives us real control. With two evil players on a 5-person quest, we can coordinate to play those critical Fail cards and even the score at 2-2. That puts us in a strong position for the final quest.*
+[Lainey] votes: Approve
+[Andrew] (thinking) I've voted to reject this nomination. Having both known evil players (Phoebe and Lainey) on the same quest team is too risky when they can coordinate Fail cards to sabotage us. We need a stronger team composition for this critical quest.
+[Nolan] (thinking) I voted Approve. With Andrew (confirmed Arthurian) on the team and a quest that can survive 1 Fail card, this seems like a reasonable path forward. We need just one more win, and approving helps us maintain momentum.
+[Eleanor] (thinking) Good - the team has been approved and we're moving to the quest phase. Now I need to play a Success card on this quest since I'm an Arthurian and we're at a critical moment where we need this to succeed.
+[Henry] (thinking) I've voted to Approve the team. As an Arthurian, I need this quest to succeed to get us to 3 wins. With 5 players, it's statistically harder for the Mordredics to sabotage (they'd need at least 2 Fail cards), and I haven't seen anything suspicious enough to reject it. Let's push forward.
+[Alexandra] votes: Approve
+[Game] status=in-progress score=Arthurian:2 Mordredic:1 quest=4 monarch=Alexandra nominated=[Andrew,Phoebe,Eleanor,Henry,Lainey] votes=8/8
+[Alexandra] (thinking) I've voted to approve this team. Having both Andrew and Phoebe on the quest is actually useful information-wise - it helps me narrow down which one is Merlin and which is Morgana based on how the quest plays out.
+[Phoebe] chat: This team looks solid to me. I'm happy to go on this quest and do what I can for our side. Let's get the vote in!
+Thu Mar 05 2026 13:11:22 GMT-0600 (Central Standard Time) [Phoebe]: This team looks solid to me. I'm happy to go on this quest and do what I can for our side. Let's get the vote in!
+[Peter] chat: Good team composition, Alexandra. Let's see how the votes shake out.
+Thu Mar 05 2026 13:11:23 GMT-0600 (Central Standard Time) [Peter]: Good team composition, Alexandra. Let's see how the votes shake out.
+[Andrew] chat: I had to reject this one. On Quest 4, we need 2 failures to lose the game. That feels too risky - I'd rather we build a team where we're more confident about who we're trusting. Let's see if we can get a stronger consensus.
+Thu Mar 05 2026 13:11:23 GMT-0600 (Central Standard Time) [Andrew]: I had to reject this one. On Quest 4, we need 2 failures to lose the game. That feels too risky - I'd rather we build a team where we're more confident about who we're trusting. Let's see if we can get a stronger consensus.
+[Eleanor] chat: I appreciate the team composition, Alexandra. This is definitely our winning opportunity. I'm confident in this group and voted Approve. Curious to see what everyone else thinks.
+Thu Mar 05 2026 13:11:23 GMT-0600 (Central Standard Time) [Eleanor]: I appreciate the team composition, Alexandra. This is definitely our winning opportunity. I'm confident in this group and voted Approve. Curious to see what everyone else thinks.
+[Lainey] chat: This looks like a solid team to me. Five strong players should have a good shot at this - let's see how everyone votes.
+Thu Mar 05 2026 13:11:23 GMT-0600 (Central Standard Time) [Lainey]: This looks like a solid team to me. Five strong players should have a good shot at this - let's see how everyone votes.
+[Henry] chat: I think this is a solid team. Eleanor and Phoebe both succeeded on Quest 3, and I'm confident in myself. Let's get this voted through and secure the win.
+Thu Mar 05 2026 13:11:23 GMT-0600 (Central Standard Time) [Henry]: I think this is a solid team. Eleanor and Phoebe both succeeded on Quest 3, and I'm confident in myself. Let's get this voted through and secure the win.
+[Phoebe] (thinking) I'm playing it safe and supportive here. I've already approved, which shows I'm confident in this team. Now I'll wait to see how the other players vote. The key will be deciding what card to play if we're approved - I have Lainey on the team with me, which gives us options, but we need to be strategic about whether to fail this quest or save our sabotage for later.
+[Peter] (thinking) I've stayed neutral and brief, which is appropriate. This gives other players space to vote without drawing unnecessary attention to myself. The team has both my Mordredic allies on it, which is good positioning for us.
+[Nolan] chat: This is definitely the critical quest. Alexandra's team has Andrew who we know is good, which is solid. I'm curious what the rest of the table thinks about the other four nominees before we vote.
+Thu Mar 05 2026 13:11:24 GMT-0600 (Central Standard Time) [Nolan]: This is definitely the critical quest. Alexandra's team has Andrew who we know is good, which is solid. I'm curious what the rest of the table thinks about the other four nominees before we vote.
+[Andrew] (thinking) I've cast my vote and explained my reasoning. Now I need to see how other players respond to the nomination and my argument. Hopefully, other good players will also see the risk in this team composition.
+[Eleanor] (thinking) I've made a brief, supportive comment that affirms the team without being overly defensive, which could raise suspicion. Now I'll wait to see how the other votes come in.
+[Lainey] (thinking) I've cast my approval and made a brief, neutral comment. As an evil player, I don't want to be too eager or suspicious. Now I wait for the other votes. If this team is approved, Phoebe and I will coordinate to play 2 Fail cards to sabotage this critical quest for the Arthurians.
+[Eleanor] quest card: Succeed
+[Phoebe] quest card: Fail
+[Henry] quest card: Succeed
+[Eleanor] (thinking) I've played my Succeed card for Quest 4. Now it depends on what the other team members play - we need to keep the Fail count to 0 or 1 to succeed on this quest. With Quests 1 and 3 having succeeded cleanly and Quest 2 failing, there's definitely at least one evil player on this team. Let's see how it plays out.
+[Phoebe] (thinking) I've played my Fail card. Now it comes down to what Lainey plays - if she also plays Fail, the quest is sabotaged and we tie the score at 2-2. The three good players on the team (Andrew, Eleanor, Henry) will have no choice but to play Success cards, making it 2 Fail, 3 Success - exactly what we need to fail this quest.
+[Henry] (thinking) I've played my Success card. Now we wait to see what the other team members play. With 5 players on this quest, we can afford up to 1 Fail card and still succeed. I'm hoping the rest of the team members are trustworthy and also play Success.
+[Andrew] quest card: Succeed
+[Andrew] (thinking) I've played my Succeed card. Now the outcome depends on what Phoebe and Lainey choose to do. If either of them plays a Fail card, this quest will fail, and Mordredics will tie the score at 2-2. The game will come down to Quest 5, which is crucial.
+[Eleanor] chat: The vote is in - let's do this. I'll give everything I have for this quest. We're one win away!
+Thu Mar 05 2026 13:11:32 GMT-0600 (Central Standard Time) [Eleanor]: The vote is in - let's do this. I'll give everything I have for this quest. We're one win away!
+[Lainey] quest card: Succeed
+[Game] status=in-progress score=Arthurian:2 Mordredic:2 quest=4 monarch=Alexandra nominated=[Andrew,Phoebe,Eleanor,Henry,Lainey] votes=8/8
+[Henry] chat: Confident in this team. Let's bring home a success on this crucial quest.
+Thu Mar 05 2026 13:11:32 GMT-0600 (Central Standard Time) [Henry]: Confident in this team. Let's bring home a success on this crucial quest.
+[Eleanor] (thinking) I'm ready to play my Success card when prompted, as an Arthurian Servant committed to helping our side win.
+[Phoebe] chat: Looking forward to this quest! I think we have a strong team and I'm ready to make this count. Let's bring it home.
+Thu Mar 05 2026 13:11:33 GMT-0600 (Central Standard Time) [Phoebe]: Looking forward to this quest! I think we have a strong team and I'm ready to make this count. Let's bring it home.
+[Henry] (thinking) I'm ready to play my Success card when prompted. This is a critical moment - if we succeed here, we're one win away from triggering the assassination phase.
+[Lainey] (thinking) I've cast my vote. Now we wait to see the full results and what Phoebe played. This is a critical juncture - if the quest succeeds, Arthurians are at 3 wins and will trigger the assassination phase where I'll have the chance to identify and kill Merlin. If it fails, we stay 2-1 and continue playing.
+[Andrew] chat: Well, the vote is in. Let's hope this team can get us the win on this critical quest.
+Thu Mar 05 2026 13:11:35 GMT-0600 (Central Standard Time) [Andrew]: Well, the vote is in. Let's hope this team can get us the win on this critical quest.
+[Alexandra] chat: The vote is in - 7 Approve, 1 Reject. This team is going on Quest 4. Everyone selected, let's focus and get this win. We're so close!
+Thu Mar 05 2026 13:11:35 GMT-0600 (Central Standard Time) [Alexandra]: The vote is in - 7 Approve, 1 Reject. This team is going on Quest 4. Everyone selected, let's focus and get this win. We're so close!
+[Nolan] chat: The vote is in - we have strong approval. Let's execute this quest cleanly. We're one win away from victory, and this team has the numbers to pull it off. Everyone on this quest team, let's play our cards and bring this home.
+Thu Mar 05 2026 13:11:36 GMT-0600 (Central Standard Time) [Nolan]: The vote is in - we have strong approval. Let's execute this quest cleanly. We're one win away from victory, and this team has the numbers to pull it off. Everyone on this quest team, let's play our cards and bring this home.
+[Phoebe] (thinking) Now I need to decide what card to play. This is the critical decision point. Given that:
+- We need only 2 Fail cards to fail this quest
+- Lainey and I can guarantee this if we both play Fail
+- Failing this quest keeps the game alive for the evil team and prevents the Arthurians from winning immediately
+
+However, I should consider: if we fail this quest, we're at 2-2, and then the Arthurians will b
+[Andrew] (thinking) I've sent a neutral, supportive message. Now I'll await the quest resolution. This is a tense moment - with two evil players on my quest team, there's a real chance it could fail. I need to play Success and hope that Eleanor and Henry also play Success to offset the likely Fail cards from Phoebe and Lainey.
+[Henry] chat: Eleanor's right - we're right there! Let's stay focused and get this done. Everyone on this team, let's make sure we play true to protect Avalon.
+Thu Mar 05 2026 13:11:37 GMT-0600 (Central Standard Time) [Henry]: Eleanor's right - we're right there! Let's stay focused and get this done. Everyone on this team, let's make sure we play true to protect Avalon.
+[Peter] (thinking) I need to analyze this situation carefully.
+
+**Current state:**
+- Arthurians have 3 wins, Mordredics have 1 win
+- This is Quest 4 (5 players, needs 2+ Fails to fail)
+- The team has been APPROVED: Andrew, Phoebe, Eleanor, Henry, Lainey
+- I'm NOT on this quest team
+
+**Analysis:**
+As Mordred on the evil team, this is actually a critical moment. The Arthurians are one quest win away from victory. The
+[Alexandra] (thinking) Now I'll await the quest results. This is the crucial moment - if this quest succeeds, we move to the assassination phase where the Assassin tries to identify Merlin. I need to stay vigilant about protecting the identity of whichever of Andrew or Phoebe is Merlin, while also being mindful of what information I'm revealing through my behavior.
+[Henry] (thinking) I'm feeling confident about this quest. With 5 players and only needing 1 Fail card to succeed, the odds are in our favor if the team is clean. I'll be ready to play my Success card when the quest card phase begins.
+[Lainey] chat: Alright, looks like we're locked in! Quest 4 is go time - this is for all the marbles. Let's head out there and give it our best effort. Time to show what we're made of!
+Thu Mar 05 2026 13:11:38 GMT-0600 (Central Standard Time) [Lainey]: Alright, looks like we're locked in! Quest 4 is go time - this is for all the marbles. Let's head out there and give it our best effort. Time to show what we're made of!
+[Lainey] (thinking) I've made a supportive statement to appear trustworthy. Now I await the quest phase where I'll play my Fail card alongside Phoebe to secure the Mordredic victory.
+[Phoebe] chat: Good luck everyone - let's see how this goes!
+Thu Mar 05 2026 13:11:41 GMT-0600 (Central Standard Time) [Phoebe]: Good luck everyone - let's see how this goes!
+[Andrew] lady of the lake: Alexandra
+[Game] status=in-progress score=Arthurian:2 Mordredic:2 quest=5 monarch=Eleanor
+[Phoebe] (thinking) I'm ready for the quest phase. I'll play a Fail card to work with Lainey to sabotage this quest and keep Mordred's chances alive for quest 5.
+[Andrew] (thinking) I'm investigating Alexandra's allegiance now. This should tell me whether the Monarch is working with the Mordredics or if she's genuinely Arthurian. This will be crucial information for the endgame.
+[Nolan] chat: We did it! Three quests secured - Avalon is safe!
+Thu Mar 05 2026 13:11:44 GMT-0600 (Central Standard Time) [Nolan]: We did it! Three quests secured - Avalon is safe!
+[Peter] (thinking) I'm reading the game state carefully. It looks like there's some confusion in the chat messages - they're referencing Quest 4, but we're actually on Quest 5 (the final quest). The Arthurians have already won 3 quests, so this Quest 5 is essentially a formality at this point - the Arthurians have already secured victory.
+
+Let me wait to see what Eleanor nominates for this final quest team. Since th
+[Henry] chat: We're one quest away - this final mission is everything. Looking forward to Eleanor's nomination. Let's make sure we finish strong.
+Thu Mar 05 2026 13:11:45 GMT-0600 (Central Standard Time) [Henry]: We're one quest away - this final mission is everything. Looking forward to Eleanor's nomination. Let's make sure we finish strong.
+[Nolan] (thinking) The Arthurian team has won the game with 3 successful quests! This is a significant victory for the good side of Avalon.
+[Lainey] chat: This is it - everything comes down to this final quest. Let's stay sharp and play with integrity. Good luck to everyone going out there.
+Thu Mar 05 2026 13:11:45 GMT-0600 (Central Standard Time) [Lainey]: This is it - everything comes down to this final quest. Let's stay sharp and play with integrity. Good luck to everyone going out there.
+[Eleanor] nominates: Henry, Phoebe, Lainey, Andrew, Nolan
+[Game] status=in-progress score=Arthurian:2 Mordredic:2 quest=5 monarch=Eleanor nominated=[Henry,Phoebe,Lainey,Andrew,Nolan]
+[Andrew] chat: We're at the final quest - Quest 5. One success and Avalon is saved. Let's focus on Eleanor's nomination.
+Thu Mar 05 2026 13:11:45 GMT-0600 (Central Standard Time) [Andrew]: We're at the final quest - Quest 5. One success and Avalon is saved. Let's focus on Eleanor's nomination.
+[Phoebe] chat: Well played everyone - that was intense! Let's see how this final quest plays out.
+Thu Mar 05 2026 13:11:46 GMT-0600 (Central Standard Time) [Phoebe]: Well played everyone - that was intense! Let's see how this final quest plays out.
+[Eleanor] (thinking) I've nominated Henry, Phoebe, Lainey, Andrew, and Nolan for Quest 5. These players have all shown confidence and commitment to the quest throughout the discussion, which suggests they're aligned with the Arthurian victory we're close to achieving.
+[Phoebe] (thinking) The game is essentially decided at this point - the Arthurians have won with 3 successful quests. Whatever happens on Quest 5, it won't change the outcome.
+[Lainey] (thinking) I'm waiting to see the actual quest team composition. Once Eleanor nominates (or has nominated) the 5 players for this final quest, I'll know whether I'm selected and can plan accordingly. The game state mentioned "Waiting for Eleanor to nominate a team" so the nomination may still be coming, or these messages might be from an earlier cycle.
+[Alexandra] chat: Looking forward to this final quest. Let's stay focused and bring this home for Avalon!
+Thu Mar 05 2026 13:11:47 GMT-0600 (Central Standard Time) [Alexandra]: Looking forward to this final quest. Let's stay focused and bring this home for Avalon!
+[Alexandra] (thinking) This is a safe, encouraging message that doesn't reveal my role or my knowledge of the auras around Andrew and Phoebe. I'm waiting to see who Eleanor nominates for the team.
+[Henry] votes: Approve
+[Andrew] votes: Reject
+[Peter] votes: Approve
+[Henry] chat: Great work everyone. Let's finish strong on this final quest!
+Thu Mar 05 2026 13:11:50 GMT-0600 (Central Standard Time) [Henry]: Great work everyone. Let's finish strong on this final quest!
+[Lainey] votes: Approve
+[Nolan] votes: Approve
+[Eleanor] votes: Approve
+[Peter] (thinking) The game is effectively over - Avalon has been secured. This final quest is just formality at this point. Well played by the good team.
+[Phoebe] votes: Approve
+[Andrew] (thinking) Now I should consider whether to say anything in chat. Given that this is the final quest, rejecting it might draw attention. However, staying silent might also look suspicious. I think a brief, measured comment that doesn't reveal my concerns but shows I care about the composition would be appropriate. Let me wait to see how others react first before deciding if I should say anything.
+[Lainey] (thinking) Well played, Arthurians. They've secured the victory - three quests completed means Avalon is safe regardless of how this final quest plays out. The good team executed well and protected Merlin's identity effectively throughout the game.
+[Nolan] (thinking) This is the final quest. We have a confirmed Arthurian in Andrew, I'm Arthurian, and we need the other three to play success. It's a calculated risk at this critical moment.
+[Phoebe] (thinking) The Arthurians have already secured their victory with 3 quest successes. Now it's time to see if the Assassin can identify and eliminate Merlin to salvage a Mordredic victory. The final quest is merely procedural at this point.
+[Eleanor] (thinking) I've voted to Approve the team I nominated. With the score already at 3-1 in our favor, this final quest is really about finishing what we started. The team composition seems solid, and I'm confident in moving forward with this group for the final mission to secure Avalon's victory.
+[Alexandra] votes: Approve
+[Game] status=in-progress score=Arthurian:2 Mordredic:2 quest=5 monarch=Eleanor nominated=[Henry,Phoebe,Lainey,Andrew,Nolan] votes=8/8
+[Alexandra] (thinking) Good luck, team. We're one quest away from securing Avalon.
+[Henry] chat: One more quest to save Avalon! I'm confident in Eleanor's team. Let's vote this through and finish strong.
+Thu Mar 05 2026 13:11:55 GMT-0600 (Central Standard Time) [Henry]: One more quest to save Avalon! I'm confident in Eleanor's team. Let's vote this through and finish strong.
+[Eleanor] chat: I know this is the final quest and it's all or nothing. I put together this team because I believe they can execute a clean success. Let's vote and see if we can close this out for Avalon!
+Thu Mar 05 2026 13:11:55 GMT-0600 (Central Standard Time) [Eleanor]: I know this is the final quest and it's all or nothing. I put together this team because I believe they can execute a clean success. Let's vote and see if we can close this out for Avalon!
+[Peter] chat: Eleanor's team looks solid to me. These are players who have shown good judgment throughout the game. I'm confident in this selection.
+Thu Mar 05 2026 13:11:55 GMT-0600 (Central Standard Time) [Peter]: Eleanor's team looks solid to me. These are players who have shown good judgment throughout the game. I'm confident in this selection.
+[Phoebe] chat: This is it - the final quest! Eleanor's nomination looks solid to me. Let's make sure we come through here.
+Thu Mar 05 2026 13:11:56 GMT-0600 (Central Standard Time) [Phoebe]: This is it - the final quest! Eleanor's nomination looks solid to me. Let's make sure we come through here.
+[Nolan] chat: This is it - one quest to save Avalon. I'm confident in this team. Let's all approve and finish this together!
+Thu Mar 05 2026 13:11:56 GMT-0600 (Central Standard Time) [Nolan]: This is it - one quest to save Avalon. I'm confident in this team. Let's all approve and finish this together!
+[Lainey] chat: This is it - the final quest! Eleanor's team looks solid to me. Let's get this vote through and see what happens on the quest.
+Thu Mar 05 2026 13:11:56 GMT-0600 (Central Standard Time) [Lainey]: This is it - the final quest! Eleanor's team looks solid to me. Let's get this vote through and see what happens on the quest.
+[Peter] (thinking) This is a safe message that makes me look supportive of the team while not revealing anything suspicious. Now I'll wait to see how the other players vote on this crucial final quest.
+[Eleanor] (thinking) Now we wait for the remaining 7 players to cast their votes. As an Arthurian, I want to see this team approved so we can complete the final quest and secure victory.
+[Andrew] chat: This is the deciding quest - everyone knows what's at stake. Let's make sure we're all thinking clearly about team composition here.
+Thu Mar 05 2026 13:11:57 GMT-0600 (Central Standard Time) [Andrew]: This is the deciding quest - everyone knows what's at stake. Let's make sure we're all thinking clearly about team composition here.
+[Phoebe] (thinking) My internal strategy: I'm on the quest team, which is good for the Mordredic side. When we're on the quest, Lainey and I can coordinate to sabotage. Since only one Fail card is needed and we have two operatives, we have good odds of failing this quest and forcing a 3-3 tie, which would then go to the Assassin phase where we have a chance to win by killing Merlin.
+[Andrew] (thinking) I've planted a seed questioning the team without being too obvious. I need to see how others vote before deciding on next steps. The nomination having both known evil players on it is suspicious and I want to encourage scrutiny.
+[Henry] quest card: Succeed
+[Nolan] quest card: Succeed
+[Alexandra] chat: Excellent work everyone! We've secured our third quest victory - Avalon is saved! Now we move to the assassination phase where Mordred's Assassin will try to identify Merlin. Let's see if evil can pull off a last-minute victory.
+Thu Mar 05 2026 13:11:59 GMT-0600 (Central Standard Time) [Alexandra]: Excellent work everyone! We've secured our third quest victory - Avalon is saved! Now we move to the assassination phase where Mordred's Assassin will try to identify Merlin. Let's see if evil can pull off a last-minute victory.
+[Peter] chat: Good luck to the team! Let's bring this home.
+Thu Mar 05 2026 13:12:00 GMT-0600 (Central Standard Time) [Peter]: Good luck to the team! Let's bring this home.
+[Nolan] (thinking) I've played my Succeed card. Now it all comes down to whether the other players on this team do the same. This is the moment where the game is decided.
+[Lainey] quest card: Fail
+[Henry] (thinking) I've played my Succeed card. Now it's up to the other team members - Phoebe, Lainey, Andrew, and Nolan. We need all of them to play Succeed for the Arthurians to win. Andrew's earlier rejection vote has me wondering about his loyalty, but hopefully this team composition was strong enough to secure the victory.
+[Alexandra] (thinking) The Arthurian team has won the quest phase. Now the critical moment comes - the Assassin must correctly identify Merlin among the remaining players. As Percival, I know Andrew and Phoebe are the ones with magical auras, meaning one is Merlin and one is Morgana. I should be prepared for the assassination phase to determine the ultimate winner!
+[Peter] (thinking) I'm being supportive while keeping a low profile. Now I await the quest card play phase where I'll need to decide whether to play a Success or Fail card. With Phoebe and Lainey both on the team, we have flexibility - only one of us needs to play Fail to sabotage. I should coordinate with them (if possible during the play phase) to ensure we get one Fail card played.
+[Lainey] (thinking) I've played my Fail card. This is the critical moment - if at least one other evil player also played Fail on this quest, we sabotage the final Arthurian victory attempt and move to the Assassin phase where I get to identify and kill Merlin for the win.
+[Phoebe] quest card: Succeed
+[Andrew] quest card: Succeed
+[Game] status=in-progress score=Arthurian:2 Mordredic:3 quest=5 monarch=Eleanor nominated=[Henry,Phoebe,Lainey,Andrew,Nolan] votes=8/8
+[Nolan] chat: This is it - everything comes down to this quest. I'm focused and ready. Let's bring this home for Avalon.
+Thu Mar 05 2026 13:12:04 GMT-0600 (Central Standard Time) [Nolan]: This is it - everything comes down to this quest. I'm focused and ready. Let's bring this home for Avalon.
+[Phoebe] (thinking) I've played Succeed. This is strategically sound because:
+1. Lainey, as an evil player on this quest, will play Fail
+2. One Fail card is enough to fail Quest 5
+3. By playing Succeed, I maintain my cover as a good player/Morgana
+4. The quest still fails, keeping the score at 3-2 for Arthurians
+5. This positions me better for the remaining quests and makes me harder to identify as evil
+[Henry] chat: This is it - everything comes down to this quest. I'm honored to be on this team and I'm ready to fight for Avalon. Let's bring it home!
+Thu Mar 05 2026 13:12:05 GMT-0600 (Central Standard Time) [Henry]: This is it - everything comes down to this quest. I'm honored to be on this team and I'm ready to fight for Avalon. Let's bring it home!
+[Andrew] (thinking) I've played my Success card as Merlin must. Now it comes down to what Phoebe and Lainey choose to do. If either of them plays a Fail card, the Arthurians lose and we move to the Assassination phase where my identity becomes known.
+[Nolan] (thinking) Now I await the quest outcome. On Quest 5, I need to play a Success card to help ensure Avalon's victory. As an Arthurian Servant, I have no special abilities or knowledge beyond knowing Andrew is Arthurian, so I should play Success to help the team win.
+[Lainey] chat: Well played, Avalon! The Arthurians have earned their victory. Now let's see if the Assassin can pull off the miraculous save here.
+Thu Mar 05 2026 13:12:06 GMT-0600 (Central Standard Time) [Lainey]: Well played, Avalon! The Arthurians have earned their victory. Now let's see if the Assassin can pull off the miraculous save here.
+[Phoebe] (thinking) I appreciate the update, but I need to clarify - the game state shows that Quest 4 has already succeeded, which means Arthurians have already won 3 quests. According to the rules, the game should now move to the assassination phase where the Assassin attempts to identify and kill Merlin.
+
+However, I see that Quest 5 is listed as "in progress" with me (Phoebe) on the team. This seems contradictory
+[Lainey] (thinking) Now I'm waiting for the game to prompt me for the assassination attempt. When that happens, I'll need to identify Merlin from among Andrew, Henry, Eleanor, Alexandra, and Nolan.
+
+Based on the gameplay:
+- Eleanor showed strong leadership and game knowledge as Monarch
+- Nolan was revealed by Lady of the Lake (but that doesn't tell me if he's Merlin)
+- Andrew voted against the final team while others
+[Eleanor] chat: Excellent work everyone! We secured Avalon's future with our three quest victories. Now let's see if the Assassin can pull off a miracle. Stay sharp, Merlin - this is where evil makes their last stand!
+Thu Mar 05 2026 13:12:09 GMT-0600 (Central Standard Time) [Eleanor]: Excellent work everyone! We secured Avalon's future with our three quest victories. Now let's see if the Assassin can pull off a miracle. Stay sharp, Merlin - this is where evil makes their last stand!
+[Nolan] (thinking) I appreciate the update, but I need to point out something important here. According to the game state, the Arthurian team has already won 3 quests (Quests 1, 3, and 4 all succeeded), which means the game should have ended and we should be in the assassination phase.
+
+However, the current game state shows we're still on Quest 5, which shouldn't even be happening if Arthurians have already secured
+[Peter] chat: Well played, Avalon! Three successful quests - the kingdom is saved. Now let's see if the Assassin can pull off the upset. This comes down to one crucial identification.
+Thu Mar 05 2026 13:12:09 GMT-0600 (Central Standard Time) [Peter]: Well played, Avalon! Three successful quests - the kingdom is saved. Now let's see if the Assassin can pull off the upset. This comes down to one crucial identification.
+[Andrew] chat: Excellent! We've earned our victory - three successful quests for Avalon! Great work everyone on the discussion and teamwork throughout the game. Now let's see if the Assassin can make a last stand.
+Thu Mar 05 2026 13:12:09 GMT-0600 (Central Standard Time) [Andrew]: Excellent! We've earned our victory - three successful quests for Avalon! Great work everyone on the discussion and teamwork throughout the game. Now let's see if the Assassin can make a last stand.
+[Alexandra] chat: This is it - everything comes down to this moment. Team, let's bring success back to Avalon!
+Thu Mar 05 2026 13:12:10 GMT-0600 (Central Standard Time) [Alexandra]: This is it - everything comes down to this moment. Team, let's bring success back to Avalon!
+[Eleanor] (thinking) As an Arthurian Servant, I'm pleased that our side has won the game by securing 3 quest victories. Now it comes down to whether the Assassin can correctly identify and eliminate Merlin to snatch a victory from the jaws of defeat. The tension is high as we await the assassination phase!
+[Peter] (thinking) Now I need to think strategically about the assassination. As Mordred, I know:
+- Lainey and Phoebe are my evil teammates
+- The Assassin is one of us three
+- I need to help guide the Assassin toward the correct target
+
+The key is figuring out who among the good players is Merlin. Looking at quest participation and voting patterns would be helpful, but I should wait to see how the assassination phas
+[Henry] chat: Wait - I think we've already won! The Arthurian team has 3 quest victories (Quests 1, 3, and 4), so Avalon is saved! There's no assassination phase needed. Good game everyone!
+Thu Mar 05 2026 13:12:11 GMT-0600 (Central Standard Time) [Henry]: Wait - I think we've already won! The Arthurian team has 3 quest victories (Quests 1, 3, and 4), so Avalon is saved! There's no assassination phase needed. Good game everyone!
+[Alexandra] (thinking) Now I'll wait to see how the quest resolves. The outcome of this final quest will determine whether we move to the assassination phase (if Arthurians win) or if Mordredics claim victory. My strategic priority will shift based on the result.
+[Andrew] (thinking) The Arthurian team has secured victory with 3 successful quests. Now I need to remain vigilant during the assassination phase - the Assassin from the Mordredic team (either Lainey, Phoebe, or another player I haven't identified) will attempt to determine my identity as Merlin and eliminate me to secure a Mordredic win.
+
+I should be careful about my behavior and voting patterns moving forward to av
+[Lainey] assassinates: Andrew
+[Andrew] game over — Assassination
+[Peter] game over — Assassination
+[Henry] game over — Assassination
+[Eleanor] game over — Assassination
+[Phoebe] game over — Assassination
+[Alexandra] game over — Assassination
+[Nolan] game over — Assassination
+[Game] status=finished score=Arthurian:2 Mordredic:3 quest=5 monarch=Eleanor nominated=[Henry,Phoebe,Lainey,Andrew,Nolan] votes=8/8 result=Assassination
+Game simulation complete
+[Lainey] (thinking) *Internal thought: I've made my choice - Andrew was assassinated. Now we'll see if I've correctly identified Merlin. This was a calculated guess based on voting patterns and game flow, but the truth will be revealed.*
+[Lainey] game over — Assassination

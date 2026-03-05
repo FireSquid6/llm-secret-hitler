@@ -67,13 +67,14 @@ Victory conditions:
 - Mordredics win: 3 quests fail, OR the Assassin correctly kills Merlin after losing
 
 Round flow:
-1. The Monarch (rotating leader) nominates players for a quest team
-2. All players vote Approve or Reject on the nominated team
-3. If majority Approve, the team goes on the quest; otherwise leadership passes clockwise
-4. If 5 nominations in a row are rejected, Mordredics win automatically
-5. Quest team members secretly play Success or Fail cards
-6. If enough Fail cards are played, the quest fails; otherwise it succeeds
-7. After 3 Arthurian quest wins: the Assassin attempts to identify and kill Merlin
+1. All players discuss who should go on the quest by using the chat. The current monarch is the defacto moderator for this discussion and can end it every time.
+2. The Monarch (rotating leader) nominates players for a quest team
+3. All players vote Approve or Reject on the nominated team
+4. If majority Approve, the team goes on the quest; otherwise leadership passes clockwise
+5. If 5 nominations in a row are rejected, Mordredics win automatically
+6. Quest team members secretly play Success or Fail cards
+7. If enough Fail cards are played, the quest fails; otherwise it succeeds
+8. After 3 Arthurian quest wins: the Assassin attempts to identify and kill Merlin
 
 Active special rules:
 - Mordred: an evil player who is invisible to Merlin

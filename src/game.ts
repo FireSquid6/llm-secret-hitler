@@ -1,3 +1,4 @@
+import { deepEquals } from "bun";
 import type { GameState, Knowledge } from "./engine";
 import type { GameAction } from "./engine/actions";
 import { generateKnowledgeMap, getAvailableActions, getBlankState, insertPlayer } from "./engine/logic";
@@ -17,15 +18,29 @@ export class AvalonGame {
   private gameListeners: [GameListener, string][] = [];
   private chatListeners: [ChatListener, string][] = [];
   private state;
-  private messages: ChatMessage[] = []; 
+  private messages: ChatMessage[] = [];
+  private lastSeenState: Map<string, GameState> = new Map();
+  private gameOverResolve!: () => void;
+  readonly finished: Promise<void>;
 
   constructor() {
+    this.finished = new Promise((resolve) => {
+      this.gameOverResolve = resolve;
+    });
     this.state = getBlankState(
       "game",
       "gameMasterUser", 
       ["Mordred", "Percival and Morgana", "Lady of the Lake"],
       8,
     );
+  }
+
+  outputRoles() {
+    for (const name in this.state.hiddenRoles) {
+      const role = this.state.hiddenRoles[name];
+      console.log(`${name}: ${role ?? "ERROR - no role"}`);
+    }
+
   }
 
   addPlayer(name: string) {
@@ -43,6 +58,7 @@ export class AvalonGame {
       },
       actorId: "gameMasterUser",
     })
+    this.outputRoles();
 
     if (result instanceof ProcessError) {
       throw new Error(`Failed to start game: ${result.type} - ${result.reason}`);
@@ -75,21 +91,28 @@ export class AvalonGame {
 
     for (const [l, n] of this.gameListeners) {
       const view = viewStateAs(this.state, n);
+      const lastView = this.lastSeenState.get(n);
       const knowledge = generateKnowledgeMap(this.state);
 
-      if (!knowledge[n]) {
-        throw new Error(`Knowledge map does not include ${n}`);
+      const playerKnowledge: Knowledge[] = knowledge[n] ?? [];
+      const actions = getAvailableActions(view, playerKnowledge, n);
+
+      // only update if there is new data
+      if (!deepEquals(view, lastView)) {
+        const res = l(view, playerKnowledge, actions);
+        if (res instanceof Promise) {
+          promises.push(res);
+        }
       }
 
-      const actions = getAvailableActions(view, knowledge[n], n);
-
-      const res = l(view, knowledge[n], actions);
-      if (res instanceof Promise) {
-        promises.push(res);
-      }
+      this.lastSeenState.set(n, view);
     }
 
     await Promise.all(promises);
+
+    if (this.state.status === "finished") {
+      this.gameOverResolve?.();
+    }
   }
 
   private async updateChatListeners(message: ChatMessage) {
@@ -134,5 +157,6 @@ export class AvalonGame {
 
     this.messages.push(msg);
     await this.updateChatListeners(msg);
+    await this.updateStateListeners();
   }
 }
