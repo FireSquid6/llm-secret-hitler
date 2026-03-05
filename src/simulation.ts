@@ -32,6 +32,8 @@ class AvalonAgent {
   private isProcessing = false;
   private systemPrompt = "";
   private conversationHistory: ModelMessage[] = [];
+  private lastKnownUpdate: Omit<StateUpdate, "recentMessages"> | null = null;
+  private lastProactiveQuestNumber = -1;
 
   constructor(
     private playerName: string,
@@ -41,6 +43,12 @@ class AvalonAgent {
 
   onChatMessage(msg: ChatMessage): void {
     this.chatBuffer.push(msg);
+    if (this.lastKnownUpdate && !this.isProcessing) {
+      const recentMessages = [...this.chatBuffer];
+      this.chatBuffer = [];
+      this.stateQueue.push({ ...this.lastKnownUpdate, recentMessages });
+      this.drainQueue().catch(console.error);
+    }
   }
 
   async onStateUpdate(
@@ -50,6 +58,8 @@ class AvalonAgent {
   ): Promise<void> {
     const recentMessages = [...this.chatBuffer];
     this.chatBuffer = [];
+
+    this.lastKnownUpdate = { state, knowledge, actions };
 
     this.systemPrompt = buildSystemPrompt(
       this.playerName,
@@ -236,9 +246,16 @@ class AvalonAgent {
       return;
     }
 
-    // Skip if nothing requires a response
-    if (actions.length === 0 && recentMessages.length === 0) {
+    const currentQuestNumber = state.rounds[state.rounds.length - 1]?.questNumber ?? 0;
+    const isNewQuestPhase = currentQuestNumber !== this.lastProactiveQuestNumber;
+
+    // Skip if nothing requires a response and we've already spoken this quest phase
+    if (actions.length === 0 && recentMessages.length === 0 && !isNewQuestPhase) {
       return;
+    }
+
+    if (isNewQuestPhase) {
+      this.lastProactiveQuestNumber = currentQuestNumber;
     }
 
     const stateDescription = describeGameState(state, actions, recentMessages);

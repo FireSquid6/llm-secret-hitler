@@ -157,6 +157,5 @@ export class AvalonGame {
 
     this.messages.push(msg);
     await this.updateChatListeners(msg);
-    await this.updateStateListeners();
   }
 }

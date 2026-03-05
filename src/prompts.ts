@@ -200,13 +200,17 @@ export function describeGameState(
   }
 
   lines.push("");
-  if (availableActions.length > 0) {
+  if (availableActions.includes("nominate")) {
     lines.push(
-      `Your available actions: ${availableActions.join(", ")} — use the appropriate tool now.`,
+      `You are the Monarch and must nominate a team. Discuss with the group first — use send_chat_message to hear opinions before nominating. When you have enough information, use the nominate tool.`,
+    );
+  } else if (availableActions.length > 0) {
+    lines.push(
+      `Your available actions: ${availableActions.join(", ")}. Use send_chat_message to discuss if appropriate, then use the action tool.`,
     );
   } else {
     lines.push(
-      `No game actions available right now. You may send chat messages.`,
+      `No game actions required from you right now. Use send_chat_message to contribute to the discussion.`,
     );
   }
 
