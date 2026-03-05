@@ -1,5 +1,5 @@
 import { generateText, tool, stepCountIs, streamText } from "ai";
-import type { CoreMessage, ToolSet } from "ai";
+import type { ModelMessage, ToolSet } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 import type { GameState, Knowledge } from "./engine";
@@ -31,7 +31,7 @@ class AvalonAgent {
   private stateQueue: StateUpdate[] = [];
   private isProcessing = false;
   private systemPrompt = "";
-  private conversationHistory: CoreMessage[] = [];
+  private conversationHistory: ModelMessage[] = [];
 
   constructor(
     private playerName: string,
@@ -244,14 +244,18 @@ class AvalonAgent {
     const stateDescription = describeGameState(state, actions, recentMessages);
     const tools = this.buildTools(state, actions);
 
+    this.conversationHistory.push({ role: "user", content: stateDescription });
+
     try {
       const result = await generateText({
         model: anthropic("claude-haiku-4-5-20251001"),
         system: this.systemPrompt,
-        messages: [{ role: "user", content: stateDescription }],
+        messages: this.conversationHistory,
         tools,
         stopWhen: stepCountIs(6),
       });
+
+      this.conversationHistory.push(...result.response.messages);
 
       if (result.text.trim()) {
         console.log(
@@ -260,6 +264,8 @@ class AvalonAgent {
       }
     } catch (e) {
       console.error(`[${this.playerName}] generateText error:`, e);
+      // roll back the user message so history stays consistent
+      this.conversationHistory.pop();
     }
   }
 }
