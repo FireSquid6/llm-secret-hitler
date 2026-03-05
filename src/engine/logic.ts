@@ -430,3 +430,72 @@ export function getTeam(role: Role): "Mordredic" | "Arthurian" {
       return "Arthurian";
   }
 }
+
+
+export function getAvailableActions(state: GameState, knowledge: Knowledge[], id: string): string[] {
+  const actions: string[] = [];
+  const currentRound = state.rounds[state.rounds.length - 1];
+  let isAssassin = false;
+  for (const k of knowledge) {
+    if (k.playerId === id && k.info.type === "role") {
+      isAssassin = k.info.role === "Assassin";
+    }
+  }
+
+  switch (getNextIntendedAction(state)) {
+    case "start":
+      if (state.gameMaster === id) {
+        actions.push("ruleset")
+        actions.push("start")
+      }
+      break;
+    case "vote":
+      if (currentRound?.votes[id] === undefined) {
+        actions.push("vote");
+      }
+      break;
+    case "lady":
+      if (state.ladyHolder === id) {
+        actions.push("lady");
+      }
+      break;
+    case "quest":
+      const isNominated = currentRound?.nominatedPlayers?.find((q) => q === id) !== undefined;
+      const hasQuested = currentRound?.quest?.questedPlayers.find((q) => q === id) !== undefined;
+
+      if (isNominated && !hasQuested) {
+        actions.push("quest");
+      }
+      break;
+    case "nominate":
+      if (currentRound?.monarch === id) {
+        actions.push("nominate");
+      }
+      break;
+    case "assassinate":
+      if (isAssassin) {
+        actions.push("assassinate");
+      }
+      break;
+    case "complete":
+      // nothing to do!
+      break;
+    case "none":
+      // nothing to do!
+      break;
+  }
+
+  if (rulesetHas(state.ruleset, "Quickshot Assassin") && state.status === "in-progress" && isAssassin) {
+    actions.push("assassinate");
+  }
+
+  if (state.status === "waiting") {
+    if (state.gameMaster === id) {
+      actions.push("abort");
+    } else {
+      actions.push("leave");
+    }
+  }
+
+  return actions;
+}
